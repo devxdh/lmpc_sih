@@ -86,6 +86,7 @@ class ExtractedPackageDeclarations(CamelModel):
     """
 
     mrp: float | None = Field(None, description="Maximum Retail Price in INR (Rule 6(1)(e))")
+    mrp_conflict: bool | None = Field(False, description="In case of different MRP in front declaration and back declarations.")
     mrp_raw_text: str | None = None
     has_inclusive_of_taxes: bool = Field(
         False, description="Presence of 'inclusive of all taxes' clause"
